@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Site Metas -->
+    <title>Mediando - Plataforma de Informação ao Ingresso do Nível Superior</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Icones -->
+    <link rel="shortcut icon" href="images/logo-mediando-icon.png" type="image/x-icon" />
+    <link rel="logo-mediando-icon" href="images/logo-mediando-icon.png">
+    <!-- Todo o CSS principal-->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/all.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/colors.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <div id="wrapper">
+        <div class="sidewrapper sidenav">
+            <div class="text-right"><a href="#" id="nav-close"><i class="flaticon-multiply"></i></a></div>
+            <div class="widget">
+                <div class="widget-title-sidebar">
+                    <h3> <span>CADASTRE SUA IES</span></h3>
+                </div><!-- fim do título -->
+                <form action="ControllerIes" method="POST" autocomplete="off"> <!-- -->
+
+                    <input class="form-control" type="text" placeholder="Código da IEs" name="cod_ies">
+                    <br>
+                    <input class="form-control" type="text" placeholder="Nome da IES" name="razao_social">
+                    <br>
+                    <input class="form-control" type="text" placeholder="CNPJ" name="cnpj">
+                    <br>
+                    <input class="form-control" type="text" placeholder="Endereço" name="endereco">
+                    <br>
+                    <input class="form-control" type="text" placeholder="E-mail" name="email">
+                    <br>
+                    <div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha">
+                    </div>
+                    <!--<div class="form-group">
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Confirme sua Senha">
+                    </div>-->
+                    <BR>
+
+                    <!--<center><P><b>Selecione as bolsas, financiamentos e parcelamentos as quais a IES trabalha:</b></P></center>
+                    <center> <input type="checkbox" name="prouni" />
+                        <B>PROUNI</B>
+                        <input type="checkbox" name="FIES" />
+                        <B>FIES</B>
+                        <input type="checkbox" name="PRAVALER" />
+                        <B>PRAVALER</B>
+                        <input type="checkbox" name="CREDUC" />
+                        <B>CREDUC</B>
+                        <input type="checkbox" name="queroBolsa" />
+                        <B>QUERO BOLSA</B>
+                        <input type="checkbox" name="educaMaisBrasil" />
+                        <B>EDUCA MAIS BRASIL</B>
+                        <br>
+                        <br>
+                    </center>
+                    Insira aqui a logo da sua IES:
+                    <input type="file"/>
+                    <hr>-->
+                    <div align="right">  <input type="submit" value="Enviar"/>
+                    </div>
+                    <br>
+                    <div align="right">  <a class="btn btn-primary" href="http://localhost:8080/pmediando/ControllerIes?action=ListAll" >Listar</a>
+                    </div>
+                </form>
+
+            </div><!-- end widget -->
+
+
+        </div><!-- end sidewrapper -->
+
+        <header class="header transparent-header">
+            <div class="container">
+                <nav class="navbar navbar-toggleable-md navbar-inverse yamm" id="slide-nav">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarTopMenu" aria-controls="navbarTopMenu" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Mediando</a>
+                    <div class="collapse navbar-collapse" id="navbarTopMenu">
+                        <ul class="navbar-nav mr-auto mt-2 mt-md-0">
+                            <li><a class="nav-link" href="index.html">Início</a></li>
+                            <li><a class="nav-link" href="#sobrenos">Sobre nós</a></li>
+                            <li class="nav-item dropdown has-submenu">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropdown05" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Formas de Ingresso</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdown05">
+                                    <!-- <li><a class="dropdown-item" href="#">Sub Parceiros <span class="hidden-md-down hidden-sm-down hidden-xs-down"><i class="fa fa-angle-right"></i></span></a> -->
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                        <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                        <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                        <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                        <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                    </ul>
+                            </li>
+                            <!-- <li><a class="dropdown-item" href="#">Sub Dropdown <span class="hidden-md-down hidden-sm-down hidden-xs-down"><i class="fa fa-angle-right"></i></span></a> -->
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                                <li><a class="dropdown-item" href="#">Sub Dropdown Item</a></li>
+                            </ul>
+                            </li>
+                            <li><a class="dropdown-item" href="http://sisu.mec.gov.br/como-funciona" target="_blank">SISU</a></li>
+                            <li><a class="dropdown-item" href="http://prouniportal.mec.gov.br/o-programa" target="_blank">PROUNI</a></li>
+                            <li><a class="dropdown-item" href="http://sisfiesportal.mec.gov.br/?pagina=fies" target="_blank">FIES</a></li>
+                            <li><a class="dropdown-item" href="https://www.educamaisbrasil.com.br/como-funciona" target="_blank">EducaMais</a></li>
+                            <li><a class="dropdown-item" href="https://querobolsa.com.br/perguntas-frequentes/o-que-e-o-quero-bolsa" target="_blank">QueroBolsa</a></li>
+                        </ul>
+                        </li>
+                        <li class="dropdown yamm-fw nav-item has-submenu">
+                            <a class="nav-link dropdown-toggle" href="#" id="dropdown61" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Instituições de Ensino</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown61">
+                                <li>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="mega-menu-items">
+                                                <h4>Universidades Federais</h4>
+                                                <ol>
+                                                    <li><a href="https://www.unb.br/" target="_blank">UNB</a></li>
+                                                    <li><a href="https://www.ufg.br/" target="_blank">UFG</a></li>
+                                                    <li><a href="https://www5.usp.br/ "target="_blank">USP</a></li>
+                                                    <li><a href="https://ufrj.br/"target="_blank">UFRJ</a></li>
+                                                    <li><a href="https://ufmg.br/"target="_blank">UFMG</a></li>
+                                                    <li><a href="https://www.unicamp.br/unicamp/"target="_blank">UNICAMP</a></li>
+                                                    <li><a href="http://www.ufrgs.br/ufrgs/inicial"target="_blank">UFRGS</a></li>
+                                                    <li><a href="https://portal.ufpa.br/"target="_blank">UFPA</a></li>
+                                                    <li><a href="https://www.unifesp.br/"target="_blank">UNIFESP</a></li>
+                                                    <li><a href="https://www.ufsm.br/"target="_blank">UFSM</a></li>
+                                                    <li><a href="http://www.uff.br/"target="_blank">UFF</a></li>
+                                                    <li><a href="http://www.ufrgs.br/ufrgs/inicial"target="_blank">UFRGS</a></li>
+                                                    <li><a href="https://ufsc.br/"target="_blank">UFSC</a></li>
+                                                </ol>
+                                            </div><!-- MENUS DOS PARCEIROS - PARTICULARES -->
+                                        </div>
+                                        <div class="col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="mega-menu-items">
+                                                <h4>Universidades Particulares</h4>
+                                                <ol>
+                                                    <li><a href="https://www.unieuro.edu.br/portal/"target="_blank">UNIEURO</a></li>
+                                                    <li><a href="https://www.uniceplac.edu.br/"target="_blank">UNICEPLAC</a></li>
+                                                    <li><a href="https://www.uniceub.br/"target="_blank">UNICEUB</a></li>
+                                                    <li><a href="http://www.uniplandf.edu.br/"target="_blank">UNIPLAN</a></li>
+                                                    <li><a href="https://www.unip.br/"target="_blank">UNIP</a></li>
+                                                    <li><a href="https://www.iesb.br/"target="_blank">IESB</a></li>
+                                                    <li><a href="https://www.udf.edu.br/"target="_blank">UDF</a></li>
+                                                    <li><a href="http://www.idp.edu.br/"target="_blank">IDP</a></li>
+                                                    <li><a href="https://vestibular.fgv.br/"target="_blank">FGV</a></li>
+                                                    <li><a href="https://upis.br/"target="_blank">UPIS</a></li>
+                                                    <li><a href="https://ucb.catolica.edu.br/"target="_blank">UCB</a></li>
+                                                    <li><a href="https://www.faculdade.jk.edu.br/"target="_blank">JK</a></li>
+                                                    <li><a href="http://unoparead.com.br/"target="_blank">UNOPAR</a></li>
+                                                </ol>
+                                            </div><!-- FIM MENUS DOS PARCEIROS - PARTICULARES -->
+                                        </div>
+
+                                        <div class="col-lg-6 hidden-md-down hidden-sm-down hidden-xs-down">
+                                            <div class="menu-image">
+                                                <img src="upload/parceiros.png" alt="" class="img-fluid">
+                                                <div class="menu-details">
+                                                    <p class="bolder">Seja nosso parceiro!</p>
+                                                    <p>Sua universidade no topo da maior plataforma de Informação ao Nível Superior do Brasil</p>
+                                                    <a href="#" class="btn btn-orange btn-sm withradius secbtn">Clique aqui!</a>
+                                                </div>
+                                            </div><!-- end menu-image -->
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-link" href="#rodape">Contatos</a></li>
+                        </ul>
+                        <div class="nav navbar-nav ml-auto hidden-md-down hidden-sm-down hidden-xs-down">
+                            <div class="head-social">
+                                <a href="https://www.facebook.com/mediandoresponde/" target="_blank" title="Facebook"><i class="fa fa-facebook"></i></a>              
+                                <a href="#" target="_blank" title="Twitter"><i class="fa fa-twitter"></i></a>
+                                <a href="https://www.instagram.com/mediandoresponde/?igshid=184ijx0atrt7a" target="_blank" title="Instagram"><i class="fa fa-instagram"></i></a>
+                            </div>
+
+                            <div class="menu-right">
+
+                                <a id="nav-expander" href="#" title="Open Right Menu"><i class="fa fa-bars"></i></a>
+                                CADASTRO DE IES
+                            </div><!-- end social -->
+                        </div>
+                    </div>
+                </nav>
+            </div><!--/.container inside nav-->
+        </header>
+
+        <section class="hero">
+            <div class="magnifier grd3"></div>
+            <div class="container">
+                <div class="hero-desc">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4><mark>MEDIANDO</mark> Nós te ajudaremos a chegar no Nível Superior!</h4>
+                            <h2>Qual o seu perfil?</h2>
+                            <p class="lead">Baseado no seu perfil socioeconomico e na sua escolaridade, selecione a opção que mais se encaixa com você:</p>
+
+
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal1">
+                                Escola Privada como Bolsista Integral + <br> Renda de até 1,5 salário mínimo + <br>  ENEM
+                            </button>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal2">
+                                Escola Privada como Bolsista + <br> Renda de até 3 salários mínimos + <br>  ENEM
+                            </button>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal3">
+                                Escola Pública + <br> Renda de até 1,5 salário mínimo + <br>  ENEM
+                            </button>
+
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal4">
+                                Escola Pública + <br> Renda de até 3 salários mínimo  + <br>  ENEM
+                            </button>
+
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal5">
+                                Escola Pública + <br> Renda de superior a 3 salários mínimo + <br>  ENEM
+                            </button>
+
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal6">
+                                Escola Privada como Bolsista + <br> Renda superior a 3 salário mínimo + <br>  ENEM
+                            </button>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal7">
+                                Escola Privada + <br> Renda superior a 3 salários mínimos + <br> ENEM
+                            </button>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#first-section" class="bottom-button"><i class="flaticon-mouse"></i></a>
+
+            <div class="top-message alert grd5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><strong>Anuncie aqui</strong> a sua universidade para milhares de interessados em ingressar no Nível Superior <a class="aaclose" href="#" data-dismiss="alert" aria-label="close" title="close">×</a></p>
+                        </div><!-- end col -->
+                    </div><!-- end row -->
+                </div><!-- end container -->
+            </div><!-- end top-message -->
+        </section><!-- end section -->
+
+        <section class="section">
+            <div class="container">
+                <div class="section-title cpurple text-left">
+                    <h4>O Mediando quer facilitar a sua vida!</h4>
+                    <h2>Todos os anos, milhares de pessoas buscam por mais qualificação e o Ensino Superior é uma delas.</h2>
+                </div><!-- end section-title -->
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="media service-style-03">
+                            <i class="d-flex mr-4 flaticon-open-box"></i>
+                            <div class="media-body">
+                                <h5 class="mt-0">Mais conhecimento</h5>
+                                <p>Essa é uma clara vantagem de possuir um diploma! Ingressar em uma boa universidade, assistir as aulas, fazer provas, trabalhos e conviver com professores renomados é algo que trará uma enorme carga de conhecimento para a sua vida.</p>
+                            </div><!-- end media-body -->
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="media service-style-03 mobmartop30">
+                            <i class="d-flex mr-4 flaticon-mail-send"></i>
+                            <div class="media-body">
+                                <h5 class="mt-0">Networking</h5>
+                                <p>Na sua graduação você conhecerá muitas pessoas e fará bastante contatos. Conseguir o primeiro emprego por exemplo, pode ser muito menos doloroso quando se tem algum contato que passe suas boas referências e possa te indicar.</p>
+                            </div><!-- end media-body -->
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <hr class="invis1">
+
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="media service-style-03">
+                            <i class="d-flex mr-4 flaticon-check-list"></i>
+                            <div class="media-body">
+                                <h5 class="mt-0">Melhores salários</h5>
+                                <p>É comprovado: pessoas formadas e portando diploma acadêmico recebem maiores remunerações em relação àquelas que não completaram uma graduação. E por quê? É simples: as pessoas formadas são consideradas mais aptas para ocupar cargos mais altos.</p>
+                            </div><!-- end media-body -->
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                        <div class="media service-style-03 mobmartop30">
+                            <i class="d-flex mr-4 flaticon-qr-code"></i>
+                            <div class="media-body">
+                                <h5 class="mt-0">Especialização</h5>
+                                <p>Com o diploma na parede, você terá a oportunidade de entrar em pós-graduações, fazer mestrado, doutorado e dar continuidade ao seu aprendizado de diversas formas — tudo isso depois de ter completado todos os anos de faculdade.</p>
+                            </div><!-- end media-body -->
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+
+        <section id="first-section" class="section lb">
+            <div class="container">
+                <div class="section-title text-center">
+                    <div id="sobrenos">
+                    </div>
+                    <h4>Sobre nós</h4>
+                    <h2>Um projeto de Iniciação Científica da UNIEURO</h2>
+                </div><!-- end section-title -->
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="service-style-01">
+                            <img src="upload/hyago_peb.png" alt="" class="img-fluid">
+                            <div class="service-desc-01">
+                                <h4><i class="flaticon-3d"></i> Hyago Santana</h4>
+                                <p>Estudante de Sistemas de Informação no Centro Universitário Euro Americano.</p>
+                                <a href="#" class="readmore">Leia mais</a>
+                            </div>
+                        </div><!-- end service-style-01 -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4 mobmar30">
+                        <div class="service-style-01">
+                            <img src="upload/miguel_peb.png" alt="" class="img-fluid">
+                            <div class="service-desc-01">
+                                <h4><i class="flaticon-photography"></i> Miguel Ursulino</h4>
+                                <p>Estudante de Sistemas de Informação no Centro Universitário Euro Americano. </p>
+                                <a href="#" class="readmore">Leia mais</a>
+                            </div>
+                        </div><!-- end service-style-01 -->
+                    </div><!-- end col -->
+
+                    <div class="col-md-4">
+                        <div class="service-style-01">
+                            <img src="upload/aldo_peb.png" alt="" class="img-fluid">
+                            <div class="service-desc-01">
+                                <h4><i class="flaticon-support"></i> Aldo Henrique Mendes</h4>
+                                <p>Professor Orientador de Sistemas de Informação no Centro Universitário Euro Americano. </p>
+                                <a href="#" class="readmore">Leia mais</a>
+                            </div>
+                        </div><!-- end service-style-01 -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </section><!-- end section -->
+
+
+        <footer class="footer section">
+            <div id="rodape">
+            </div>
+
+            <div class="container"> 
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="widget">
+                            <a href="index.html" title=""><img src="images/flogo.png" class="footer-logo" alt=""></a>
+                            <h4 class="widget-title">
+                                Sobre o Mediando
+                            </h4>
+                            <div class="about-widget">
+                                <p>Nós estamos aqui pra mediar a sua entrada no mundo acadêmico!</p>
+                            </div><!-- end about-widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                    <div class="col-md-8 mobmartop30">
+                        <div class="widget">
+                            <div class="footer-links">
+                                <nav class="foot-link">
+                                    <ul>
+                                        <li><a href="#">Início</a></li>
+                                        <li><a href="#">Sobre</a></li>
+                                        <li><a href="#">Formas de Ingresso</a></li>
+                                        <li><a href="#">Parceiros</a></li>
+                                        <li><a href="#">Contatos</a></li>
+                                    </ul>
+                                </nav><!-- end foot -->
+                            </div><!-- end links -->
+
+                            <div class="widget">
+                                <div class="contact-widget">
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <h4 class="widget-title">
+                                                <i class="fa fa-map-marker"></i> Nosso escritório
+                                            </h4>  
+                                            <p>Av. das Castanheiras <br>Lote 3700 Águas Claras <br> Brasília - DF, 72025-065</p>
+                                        </div><!-- end col -->
+
+                                        <div class="col-md-4">
+                                            <h4 class="widget-title">
+                                                <i class="fa fa-phone"></i> Telefone
+
+                                            </h4>  
+                                            <p>+55 (061) 98571-1453</p>
+                                            <p>+55 (061) 99838-2162</p>
+                                            <p>+55 (061) 4020-7525</p>
+                                        </div><!-- end col -->
+
+                                        <div class="col-md-4">
+                                            <h4 class="widget-title">
+                                                <i class="fa fa-envelope-open-o"></i>  Email
+                                            </h4>  
+                                            <p>contato@mediando.com.br</p>
+                                        </div><!-- end col -->
+                                    </div><!-- end row -->
+                                </div><!-- end contact-widget -->
+                            </div><!-- end widget -->
+                        </div><!-- end widget -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="footer-social">
+                            <div itemscope="" itemtype="http://schema.org/Organization">
+                                <a class="social-icon" target="_blank" itemprop="sameAs" href="https://www.facebook.com/htmldotdesign/"><i class="fa fa-facebook"></i></a>
+                                <a class="social-icon" target="_blank" itemprop="sameAs" href="https://www.twitter.com/htmldotdesign/"><i class="fa fa-twitter"></i></a>
+                                <a class="social-icon" target="_blank" itemprop="sameAs" href="https://plus.google.com/+htmldesign"><i class="fa fa-google-plus"></i></a>
+                                <a class="social-icon" target="_blank" itemprop="sameAs" href="https://www.freelancer.com/u/JollyINC"><i class="fa fa-code"></i></a>
+                            </div>
+                        </div>
+                        <div class="footer-copy">
+                            <p>© 2019 Todos os direitos reservados <a href="#">Mediando</a> - Design: <a> Iniciação Ciêntifica - UNIEURO</a></p>
+                        </div><!-- end copy -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </footer><!-- end footer -->
+    </div><!-- end wrapper -->
+
+    <div class="dmtop"><i class="fa fa-long-arrow-up"></i></div>
+
+    <!-- Core JavaScript
+    ================================================== -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/custom.js"></script>
+
+</body>
+</html>
+
+<!-- Modal 1 -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Seu perfil é:<br> Escola Pública + até 1 Salário Minímo + ENEM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                O seu perfil te dá direito as seguintes formas de ingresso:
+                PROUNI, SISU, FIES, QUERO BOLSA E EDUCAMAIS
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Seu perfil é:<br> Escola Privada como Bolsista Integral + até 1 Salário Minímo + ENEM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Com o seu perfil você pode concorrer as seguintes formas de ingresso:
+                PROUNI, SISU, FIES, QUERO BOLSA E EDUCAMAIS
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Seu perfil é:<br> Escola Privada como Bolsista Integral + até 1 Salário Minímo + ENEM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Com o seu perfil você pode concorrer as seguintes formas de ingresso:
+                PROUNI, SISU, FIES, QUERO BOLSA E EDUCAMAIS
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Seu perfil é:<br> Escola Privada como Bolsista Integral + até 1 Salário Minímo + ENEM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Com o seu perfil você pode concorrer as seguintes formas de ingresso:
+                PROUNI, SISU, FIES, QUERO BOLSA E EDUCAMAIS
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 5 -->
+<div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Seu perfil é:<br> Escola Privada como Bolsista Integral + até 1 Salário Minímo + ENEM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Com o seu perfil você pode concorrer as seguintes formas de ingresso:
+                PROUNI, SISU, FIES, QUERO BOLSA E EDUCAMAIS
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 6 -->
+<div class="modal fade" id="exampleModal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Seu perfil é:<br> Escola Privada como Bolsista Integral + até 1 Salário Minímo + ENEM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Com o seu perfil você pode concorrer as seguintes formas de ingresso:
+                PROUNI, SISU, FIES, QUERO BOLSA E EDUCAMAIS
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal 7 -->
+<div class="modal fade" id="exampleModal7" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"> Seu perfil é:<br> Escola Privada como Bolsista Integral + até 1 Salário Minímo + ENEM</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Com o seu perfil você pode concorrer as seguintes formas de ingresso:
+                PROUNI, SISU, FIES, QUERO BOLSA E EDUCAMAIS
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
