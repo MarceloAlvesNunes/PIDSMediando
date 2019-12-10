@@ -68,7 +68,7 @@ public final class ListAll_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <table border=1> <!-- tabela que irar receber os dados e mostrar na tela -->\n");
       out.write("            <thead>\n");
       out.write("                <tr bgcolor=\"#eaeaea\">\n");
-      out.write("                    <th> User_Id </th>\n");
+      out.write("                    <th> Ies_Id </th>\n");
       out.write("                    <th> Cad_Ies </th> \n");
       out.write("                    <th> Razão_Social </th> \n");
       out.write("                    <th> Cnpj </th> \n");
@@ -86,11 +86,10 @@ public final class ListAll_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </tbody>\n");
       out.write("</table> \n");
       out.write("</br>\n");
-      out.write("<form method=\"POST\" action='user.jsp' name=\"frmAddIes\">\n");
+      out.write("<form method=\"POST\" action='ies.jsp' name=\"frmAddIes\">\n");
       out.write("    <input type=\"submit\" value=\"Adicionar Ies\"/>\n");
       out.write("\n");
       out.write("</form>\n");
-      out.write("<!--<p><a href=\"ControllerIes?action=insert\">Adicionar IES</a></p>-->\n");
       out.write("</body>\n");
       out.write("</html>");
     } catch (Throwable t) {
@@ -124,7 +123,7 @@ public final class ListAll_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write(" <!-- for que irar criar novos campos para guardar novos dados -->\n");
           out.write("                    <tr>\n");
           out.write("                        <!out = ao println!/>\n");
-          out.write("                <td></td>\n");
+          out.write("                <!--<td></td>-->\n");
           out.write("                <td>");
           if (_jspx_meth_c_out_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
@@ -150,11 +149,11 @@ public final class ListAll_jsp extends org.apache.jasper.runtime.HttpJspBase
             return true;
           out.write("</td>\n");
           out.write("\n");
-          out.write("                <td><a href=\"ControllerIes?action=edit&userid=");
+          out.write("                <td><a href=\"ControllerIes?action=edit&iesId=");
           if (_jspx_meth_c_out_6((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\">Update</a></td>\n");
-          out.write("                <td><a href=\"ControllerIes?action=delete&userid=");
+          out.write("                <td><a href=\"ControllerIes?action=delete&iesId=");
           if (_jspx_meth_c_out_7((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_forEach_0, _jspx_page_context, _jspx_push_body_count_c_forEach_0))
             return true;
           out.write("\">Delete</a></td>\n");
@@ -295,7 +294,7 @@ public final class ListAll_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_6 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_6.setPageContext(_jspx_page_context);
     _jspx_th_c_out_6.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ies.userid}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_6.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ies.iesId}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_6 = _jspx_th_c_out_6.doStartTag();
     if (_jspx_th_c_out_6.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_6);
@@ -313,7 +312,7 @@ public final class ListAll_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.OutTag _jspx_th_c_out_7 = (org.apache.taglibs.standard.tag.rt.core.OutTag) _jspx_tagPool_c_out_value_nobody.get(org.apache.taglibs.standard.tag.rt.core.OutTag.class);
     _jspx_th_c_out_7.setPageContext(_jspx_page_context);
     _jspx_th_c_out_7.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_forEach_0);
-    _jspx_th_c_out_7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ies.userid}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_out_7.setValue((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${ies.iesId}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     int _jspx_eval_c_out_7 = _jspx_th_c_out_7.doStartTag();
     if (_jspx_th_c_out_7.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
       _jspx_tagPool_c_out_value_nobody.reuse(_jspx_th_c_out_7);

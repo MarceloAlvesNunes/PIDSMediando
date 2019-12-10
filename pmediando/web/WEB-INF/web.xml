@@ -24,7 +24,7 @@
     
     <servlet-mapping>
         <servlet-name>Mediando</servlet-name>
-        <url-pattern>/OlaMundoDoidao</url-pattern>
+        <url-pattern>/listAll.jsp</url-pattern>
     </servlet-mapping>
     
 </web-app>

@@ -3,15 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/welso/Desktop/pmediando/src/java/util/DbUtil.java</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/web/index.html</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/src/java/controller/ControllerIes.java</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/web/ListAll.jsp</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/src/java/model/CadastroIes.java</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/web/index.jsp</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/src/java/dao/CadastroIesDao.java</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/web/style.css</file>
-            <file>file:/C:/Users/welso/Desktop/pmediando/web/user.jsp</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/web/ListAll.jsp</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/web/ies.jsp</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/web/index.html</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/src/java/controller/ControllerIes.java</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/src/java/model/CadastroIes.java</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/src/java/util/DbUtil.java</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/src/java/dao/CadastroIesDao.java</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/web/index.jsp</file>
+            <file>file:/C:/Users/Marcelo/Documents/NetBeansProjects/pmediando/pmediando/web/WEB-INF/web.xml</file>
         </group>
     </open-files>
 </project-private>

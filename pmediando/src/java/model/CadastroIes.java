@@ -3,7 +3,7 @@ package model;
 
 public class CadastroIes {
 
-    private int userid;
+    private int iesId;
     private int cod_ies;
     private String razao_social;
     private String cnpj;
@@ -15,8 +15,8 @@ public class CadastroIes {
     public CadastroIes() {
     }
 
-    public CadastroIes(int userid, int cod_ies, String razao_social, String cnpj, String endereco, String email, String senha) {
-        this.userid = userid;
+    public CadastroIes(int iesId, int cod_ies, String razao_social, String cnpj, String endereco, String email, String senha) {
+        this.iesId = iesId;
         this.cod_ies = cod_ies;
         this.razao_social = razao_social;
         this.cnpj = cnpj;
@@ -26,12 +26,12 @@ public class CadastroIes {
     }
 
     //Gets e sets
-    public int getUserid() {
-        return userid;
+    public int getIesId() {
+        return iesId;
     }
 
-    public void setUserid(int userid) {
-        this.userid = userid;
+    public void setIesId(int iesId) {
+        this.iesId = iesId;
     }
 
     public String getSenha() {
@@ -84,7 +84,7 @@ public class CadastroIes {
 
     @Override
     public String toString() {
-        return "CadastroIes{" + "userid=" + userid + ", cod_ies=" + cod_ies + ", razao_social=" + razao_social + ", cnpj=" + cnpj + ", endereco=" + endereco + ", email=" + email + ", senha=" + senha + '}';
+        return "CadastroIes{" + "iesId=" + iesId + ", cod_ies=" + cod_ies + ", razao_social=" + razao_social + ", cnpj=" + cnpj + ", endereco=" + endereco + ", email=" + email + ", senha=" + senha + '}';
     }
 
 }

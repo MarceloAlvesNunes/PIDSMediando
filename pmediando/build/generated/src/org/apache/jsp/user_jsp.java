@@ -61,6 +61,7 @@ public final class user_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("              href=\"css/ui-lightness/jquery-ui-1.8.18.custom.css\" rel=\"stylesheet\" />\n");
       out.write("        <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-1.7.1.js\"></script>\n");
       out.write("        <script type=\"text/javascript\" src=\"http://www.godtur.no/godtur/js/jquery-ui-1.8.18.custom.min.js\"></script>\n");
+      out.write("\n");
       out.write("        <title>Add new user</title>\n");
       out.write("    </head>\n");
       out.write("    <body>\n");
@@ -90,7 +91,7 @@ public final class user_jsp extends org.apache.jasper.runtime.HttpJspBase
         return;
       out.write("\" /> <br /> \n");
       out.write("\n");
-      out.write("            Email : <input type=\"text\" name=\"email\"\n");
+      out.write("            Email : <input type=\"text\" name=\"email\" size=\"20\"\n");
       out.write("                           value=\"");
       if (_jspx_meth_c_out_4(_jspx_page_context))
         return;
@@ -107,8 +108,11 @@ public final class user_jsp extends org.apache.jasper.runtime.HttpJspBase
       if (_jspx_meth_c_out_6(_jspx_page_context))
         return;
       out.write("\" /> <br />\n");
-      out.write("            \n");
+      out.write("\n");
       out.write("            <input type=\"submit\" value=\"Submit\" />\n");
+      out.write("\n");
+      out.write("            <script> alert(\"Cadastrado com Sucesso !\");\n");
+      out.write("            </script>\n");
       out.write("        </form>\n");
       out.write("    </body>\n");
       out.write("</html>\n");

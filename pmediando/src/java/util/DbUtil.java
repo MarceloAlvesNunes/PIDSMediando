@@ -19,10 +19,8 @@ public class DbUtil {
 
                 String user = "postgres";
                 String password = "postgres";
-                //Class.forName("com.mysql.jdbc.Driver"); // Para quem for usar MySql
-                Class.forName("org.postgresql.Driver");// Para quem for usar Postgres
-                //connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/postgres", user, password);// Para quem for usar MySql
-                connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dbmediando", user, password);// Para quem for usar Postgres
+                Class.forName("org.postgresql.Driver");// drive para o postgres
+                connection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/dbmediando", user, password);// Faz a conexao com o postgres
                 System.out.print("Conexão efetuada com sucesso...\n");
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();

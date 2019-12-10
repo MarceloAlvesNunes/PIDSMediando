@@ -14,8 +14,8 @@ import model.CadastroIes;
 public class ControllerIes extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
-    private static String INSERT_OR_EDIT = "user.jsp";
-    private static String LIST_USER = "ListAll.jsp";
+    private static String INSERT_OR_EDIT = "ies.jsp";
+    private static String LIST_All = "ListAll.jsp";
     private CadastroIesDao dao;
 
     public ControllerIes() {
@@ -29,17 +29,17 @@ public class ControllerIes extends HttpServlet {
         String action = request.getParameter("action");
 
         if (action.equalsIgnoreCase("delete")) {
-            int userId = Integer.parseInt(request.getParameter("userid"));
-            dao.deleteIes(userId);
-            forward = LIST_USER;
+            int iesId = Integer.parseInt(request.getParameter("iesId"));
+            dao.deleteIes(iesId);
+            forward = LIST_All;
             request.setAttribute("Ies", dao.getAllIes());
         } else if (action.equalsIgnoreCase("edit")) {
             forward = INSERT_OR_EDIT;
-            int userId = Integer.parseInt(request.getParameter("userid"));
-            CadastroIes cad = dao.getIesById(userId);
+            int iesId = Integer.parseInt(request.getParameter("iesId"));
+            CadastroIes cad = dao.getIesById(iesId);
             request.setAttribute("ies", cad);
         } else if (action.equalsIgnoreCase("ListAll")) {
-            forward = LIST_USER;
+            forward = LIST_All;
             request.setAttribute("Ies", dao.getAllIes());
         } else {
             forward = INSERT_OR_EDIT;
@@ -58,16 +58,13 @@ public class ControllerIes extends HttpServlet {
         cad.setEndereco(request.getParameter("endereco"));
         cad.setEmail(request.getParameter("email"));
         cad.setSenha(request.getParameter("senha"));
-        String userid = request.getParameter("userid");
-        if (userid == null || userid.isEmpty()) {
+        String iesId = request.getParameter("iesId");
+        if (iesId == null || iesId.isEmpty()) {
             dao.addIes(cad);
         } else {
-            cad.setUserid(Integer.parseInt(userid));
+            cad.setIesId(Integer.parseInt(iesId));
             dao.updateIes(cad);
         }
-        //RequestDispatcher view = request.getRequestDispatcher(LIST_USER);
-        //request.setAttribute("Ies", dao.getAllIes());
-        //view.forward(request, response);
         response.sendRedirect(request.getContextPath()+"/index.html");
     }
 }

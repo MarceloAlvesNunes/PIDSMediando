@@ -32,6 +32,7 @@ public class CadastroIesDao {
             preparedStatement.close();
 
             System.out.println("guardado com sucesso");
+            
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -41,13 +42,13 @@ public class CadastroIesDao {
     public void updateIes(CadastroIes ies) {  // atualiza qualquer alterção nos dados direto no banco de acordo com o id
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("update instituicoes  set  razao_social=?, cnpj=?, endereco=?, email=?, senha=?" + "where userid=?");
+                    .prepareStatement("update instituicoes  set  razao_social=?, cnpj=?, endereco=?, email=?, senha=?" + "where iesId=?");
             preparedStatement.setString(1, ies.getRazao_social());
             preparedStatement.setString(2, ies.getCnpj());
             preparedStatement.setString(3, ies.getEndereco());
             preparedStatement.setString(4, ies.getEmail());
             preparedStatement.setString(5, ies.getSenha());
-            preparedStatement.setInt(6, ies.getUserid());
+            preparedStatement.setInt(6, ies.getIesId());
             preparedStatement.executeUpdate();
             preparedStatement.close();
 
@@ -56,11 +57,11 @@ public class CadastroIesDao {
         }
     }
 
-    public void deleteIes(int userId) {  // deleleta no banco utilizando o id 
+    public void deleteIes(int iesId) {  // deleleta no banco utilizando o id 
         try {
             PreparedStatement preparedStatement = connection
-                    .prepareStatement("delete from instituicoes where userid=?");
-            preparedStatement.setInt(1, userId);
+                    .prepareStatement("delete from instituicoes where iesId=?");
+            preparedStatement.setInt(1, iesId);
             preparedStatement.executeUpdate();
             System.out.println("Deletado com sucesso");
         } catch (SQLException e) {
@@ -76,7 +77,7 @@ public class CadastroIesDao {
             while (rs.next()) {
                 CadastroIes ies = new CadastroIes();
 
-                ies.setUserid(rs.getInt("userid"));
+                ies.setIesId(rs.getInt("iesId"));
                 ies.setCod_ies(rs.getInt("cod_ies"));
                 ies.setRazao_social(rs.getString("razao_social"));
                 ies.setCnpj(rs.getString("cnpj"));
@@ -90,15 +91,15 @@ public class CadastroIesDao {
         return listaDeIes;
     }
 
-    public CadastroIes getIesById(int userId) {  // pesquisa os dados utilizando o id
+    public CadastroIes getIesById(int iesId) {  // pesquisa os dados utilizando o id
         CadastroIes ies = new CadastroIes();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement("select * from instituicoes where userid=?");
-            preparedStatement.setInt(1, userId);
+            PreparedStatement preparedStatement = connection.prepareStatement("select * from instituicoes where iesId=?");
+            preparedStatement.setInt(1, iesId);
             ResultSet rs = preparedStatement.executeQuery();
 
             if (rs.next()) {
-                ies.setUserid(rs.getInt("userid"));
+                ies.setIesId(rs.getInt("iesId"));
                 ies.setCod_ies(rs.getInt("cod_ies"));
                 ies.setRazao_social(rs.getString("razao_social"));
                 ies.setEndereco(rs.getString("endereco"));
